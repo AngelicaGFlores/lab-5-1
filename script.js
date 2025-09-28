@@ -15,18 +15,20 @@ function updateTotalPrice(amount) {
 //add product to cart
 // Dynamically add a new product
 addProductButton.addEventListener("click", () => {
-    const nameOfProduct = productNameInput.value;
-    updateTotalPrice(Number(productPriceInput.value));
+	const nameOfProduct = productNameInput.value;
+	updateTotalPrice(Number(productPriceInput.value));
 
-    
-    //console.log(productNameInput.value);
+	//console.log(productNameInput.value);
 	const newProduct = document.createElement("li");
-    // //newProduct.dataset.id = '3';
+	// //newProduct.dataset.id = '3';
 
-    newProduct.innerHTML = `${nameOfProduct} $${productPriceInput.value}  <button class="Removed">Remove</button>`;
-
+	newProduct.innerHTML = `${nameOfProduct} $${productPriceInput.value}  <button class="Removed">Remove</button>`;
+	//adding the new product to the cart ID UL
 	cart.appendChild(newProduct);
 });
+
+//to remove an item when tapping on "remove" button
+cart.addEventListener("click", removeItem);
 
 // Function to remove an item
 function removeItem(event) {
