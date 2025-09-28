@@ -17,6 +17,15 @@ function updateTotalPrice(amount) {
 addProductButton.addEventListener("click", () => {
     const nameOfProduct = productNameInput.value;
     const newProduct = document.createElement("li");
+
+    //check for valid inputs here for the name
+    //make sure its not null
+    if (nameOfProduct === "" || productPriceInput === null) {
+        alert("Make sure you are inputing a name product");
+        //return will end a function being called
+        return 
+
+    }
     newProduct.dataset.price = productPriceInput.value;
     //console.log("this is the price here "+)
 	updateTotalPrice(Number(productPriceInput.value));
