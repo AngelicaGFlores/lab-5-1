@@ -23,8 +23,7 @@ addProductButton.addEventListener("click", () => {
 
 	//console.log(productNameInput.value);
 	
-	//newProduct.dataset.price = totalPrice;
-
+	//the item will have the price set to the value the user put
 	newProduct.innerHTML = `${nameOfProduct} $${productPriceInput.value}  <button class="Removed">Remove</button>`;
 	//adding the new product to the cart ID UL
 	cart.appendChild(newProduct);
