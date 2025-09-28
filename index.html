@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <h1>header lab-5-1</h1>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+		<title>Dynamic Shopping Cart</title>
+	</head>
+	<body>
+		<h1>Dynamic Shopping Cart</h1>
+		<div id="product-container">
+			<input type="text" id="product-name" placeholder="Product Name" />
+			<input type="number" id="product-price" placeholder="Product Price" />
+			<button id="add-product">Add Product</button>
+		</div>
+		<section>
+			<ul id="cart">
+				product cart here
+			</ul>
+
+			<h3>Total: $<span id="total-price">0</span></h3>
+		</section>
+	</body>
 </html>
